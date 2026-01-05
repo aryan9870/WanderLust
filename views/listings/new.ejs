@@ -1,0 +1,67 @@
+<% layout("layouts/boilerplate") %>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8 col-10 offset-md-2 offset-1">
+                <br><br>
+                <h3>Create new Listing</h3>
+                <form action="/listings" method="POST" class="needs-validation" novalidate
+                    enctype="multipart/form-data">
+                    <div class="mb-2">
+                        <label class="form-label" for="title">Title</label>
+                        <input class="form-control" type="text" name="title" id="title" placeholder="Add a catchy title"
+                            required>
+                        <div class="valid-feedback">Title looks good</div>
+                    </div>
+                    <div class="mb-2">
+                        <label class="form-label" for="description">Description</label>
+                        <textarea class="form-control" type="text" name="description" id="description"
+                            required></textarea>
+                        <div class="invalid-feedback">Please enter a short description</div>
+                    </div>
+                    <div class="mb-2">
+                        <label class="form-label" for="image">Upload Image</label>
+                        <input class="form-control" type="file" name="image" id="image" required>
+                        <div class="invalid-feedback">Please Upload a image</div>
+                    </div>
+                    <div class="row">
+                        <div class="mb-2 col-md-4">
+                            <label class="form-label" for="price">Price</label>
+                            <input class="form-control" type="text" name="price" id="price" placeholder="1200" required>
+                            <div class="invalid-feedback">Price should be valid</div>
+                        </div>
+                        <div class="mb-2 col-md-8">
+                            <label class="form-label" for="location">Location</label>
+                            <input class="form-control" type="text" name="location" id="location"
+                                placeholder="Jaipur, Agra" required>
+                            <div class="invalid-feedback">Location should be valid</div>
+                        </div>
+                    </div>
+                    <div class="mb-2">
+                        <label class="form-label" for="country">Country</label>
+                        <input class="form-control" type="text" name="country" id="country" placeholder="India"
+                            required>
+                        <div class="invalid-feedback">Country name should be valid</div>
+                    </div>
+                    <div class="mb-2">
+                        <select name="category" class="form-select" aria-label="Default select example">
+                            <option selected>Select a cetegory which suits this property</option>
+                            <option value="trending">Trending</option>
+                            <option value="mountains">Mountains</option>
+                            <option value="beaches">Beaches</option>
+                            <option value="camping">Camping</option>
+                            <option value="rooms">Rooms</option>
+                            <option value="iconic">Iconic</option>
+                            <option value="castles">Castles</option>
+                            <option value="pools">Pools</option>
+                            <option value="farms">Farms</option>
+                            <option value="arctic">Arctic</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-dark add-btn">Add</button>
+                    <br><br>
+                </form>
+            </div>
+        </div>
+
+    </div>
